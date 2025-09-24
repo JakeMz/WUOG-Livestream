@@ -99,7 +99,7 @@ Enter the console to the livestream droplet through digital ocean (be sure to lo
 ```
 <listen-socket>
     <port>8000</port>
-    <!-- <bind-address>127.0.0.1</bind-address> →
+    <!-- <bind-address>127.0.0.1</bind-address> -->
     <!-- <shoutcast-mount>/stream</shoutcast-mount> -->
 </listen-socket>
 <listen-socket>
