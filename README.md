@@ -158,4 +158,34 @@ server {
 12. `$ sudo certbot -d stream.wuog.org --agree-tos`
 13. `$ sudo systemctl restart nginx`
 
+## Creating Start/Restart Scripts
+To make restarting the stream easier, you can create a script in icecaster's home directory.
+
+1. `$ pwd`
+
+   This should return “/home/icecaster”. If it does not, then leave the console and log back in as icecaster.
+
+2. `$ sudo emacs start.sh`
+3. Into this file, write and save:
+
+```
+echo sudo systemctl start icecast2
+sudo systemctl start icecast2
+echo sudo systemctl start nginx
+sudo systemctl start nginx
+```
+
+4. `$ sudo emacs restart.sh`
+5. Into this file, write and save:
+
+```
+echo sudo systemctl restart icecast2
+sudo systemctl restart icecast2
+echo sudo systemctl restart nginx
+sudo systemctl restart nginx
+```
+
+6. `$ sudo chmod -rwx start.sh`
+7. `$ sudo chmod -rwx restart.sh`
+
 
